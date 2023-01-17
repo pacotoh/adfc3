@@ -1,0 +1,31 @@
+{
+	"name": "test",
+	"properties": {
+		"activities": [
+			{
+				"name": "SetVariable",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "mi_variable",
+					"value": {
+						"value": "@pipeline().parameters.valor",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"valor": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"mi_variable": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
