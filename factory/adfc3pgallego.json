@@ -1,0 +1,9 @@
+{
+	"name": "adfc3pgallego",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "29df8aef-909d-4a57-8f89-9f5424c372bc",
+		"tenantId": "9e177e8d-e276-4922-ace9-f66627fbaee0"
+	}
+}
