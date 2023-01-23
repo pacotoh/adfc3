@@ -1,10 +1,6 @@
 {
 	"name": "BlobStorageCsv",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage1",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"path": {
 				"type": "string"
