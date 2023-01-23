@@ -16,7 +16,10 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "*",
-				"container": "input"
+				"container": {
+					"value": "@dataset().path",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
