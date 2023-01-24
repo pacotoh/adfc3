@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "SetName",
+				"name": "SetNameCopy",
 				"type": "SetVariable",
 				"dependsOn": [],
 				"userProperties": [],
