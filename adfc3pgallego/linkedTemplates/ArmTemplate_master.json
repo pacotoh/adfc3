@@ -7,14 +7,6 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfc3pgallego"
 		},
-		"trigger1_properties_SetVariables_copy1_parameters_paramName": {
-			"type": "string",
-			"defaultValue": "semanal"
-		},
-		"triggerSetVariables_properties_SetVariables_parameters_paramName": {
-			"type": "string",
-			"defaultValue": "adios"
-		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -41,12 +33,6 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
-					},
-					"trigger1_properties_SetVariables_copy1_parameters_paramName": {
-						"value": "[parameters('trigger1_properties_SetVariables_copy1_parameters_paramName')]"
-					},
-					"triggerSetVariables_properties_SetVariables_parameters_paramName": {
-						"value": "[parameters('triggerSetVariables_properties_SetVariables_parameters_paramName')]"
 					}
 				}
 			},

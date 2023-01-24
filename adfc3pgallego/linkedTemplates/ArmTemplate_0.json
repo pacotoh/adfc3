@@ -6,14 +6,6 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "adfc3pgallego"
-		},
-		"trigger1_properties_SetVariables_copy1_parameters_paramName": {
-			"type": "string",
-			"defaultValue": "semanal"
-		},
-		"triggerSetVariables_properties_SetVariables_parameters_paramName": {
-			"type": "string",
-			"defaultValue": "adios"
 		}
 	},
 	"variables": {
@@ -65,7 +57,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "SetName",
+						"name": "SetNameCopy",
 						"type": "SetVariable",
 						"dependsOn": [],
 						"userProperties": [],
@@ -95,70 +87,6 @@
 				"annotations": []
 			},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/trigger1')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Started",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "SetVariables_copy1",
-							"type": "PipelineReference"
-						},
-						"parameters": {
-							"paramName": "[parameters('trigger1_properties_SetVariables_copy1_parameters_paramName')]"
-						}
-					}
-				],
-				"type": "ScheduleTrigger",
-				"typeProperties": {
-					"recurrence": {
-						"frequency": "Week",
-						"interval": 1,
-						"startTime": "2023-01-24T17:59:00Z",
-						"timeZone": "UTC"
-					}
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/SetVariables_copy1')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/triggerSetVariables')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Started",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "SetVariables",
-							"type": "PipelineReference"
-						},
-						"parameters": {
-							"paramName": "[parameters('triggerSetVariables_properties_SetVariables_parameters_paramName')]"
-						}
-					}
-				],
-				"type": "ScheduleTrigger",
-				"typeProperties": {
-					"recurrence": {
-						"frequency": "Day",
-						"interval": 1,
-						"startTime": "2023-01-24T17:32:00Z",
-						"timeZone": "UTC"
-					}
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/SetVariables')]"
-			]
 		}
 	]
 }
