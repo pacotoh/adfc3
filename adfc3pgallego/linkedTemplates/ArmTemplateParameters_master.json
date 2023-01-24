@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "adfc3pgallego"
 		},
+		"trigger1_properties_SetVariables_copy1_parameters_paramName": {
+			"value": "semanal"
+		},
 		"triggerSetVariables_properties_SetVariables_parameters_paramName": {
 			"value": "adios"
 		},
