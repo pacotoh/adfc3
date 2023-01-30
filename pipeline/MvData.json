@@ -50,7 +50,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "BlobContainer",
 						"type": "DatasetReference",
 						"parameters": {
 							"container": {
@@ -62,7 +62,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "BlobContainer",
 						"type": "DatasetReference",
 						"parameters": {
 							"container": {
@@ -94,7 +94,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DelimitedText1",
+						"referenceName": "BlobContainer",
 						"type": "DatasetReference",
 						"parameters": {
 							"container": {
