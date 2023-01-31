@@ -14,15 +14,34 @@
 						"type": "Expression"
 					}
 				}
+			},
+			{
+				"name": "SetAge",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "age",
+					"value": {
+						"value": "@pipeline().parameters.paramEdad",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
 			"paramName": {
 				"type": "string"
+			},
+			"paramEdad": {
+				"type": "int"
 			}
 		},
 		"variables": {
 			"name": {
+				"type": "String"
+			},
+			"age": {
 				"type": "String"
 			}
 		},
