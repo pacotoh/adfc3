@@ -16,7 +16,8 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "MySqlSource"
+						"type": "MySqlSource",
+						"query": "SELECT *\nFROM test\nWHERE value > 5;"
 					},
 					"sink": {
 						"type": "DelimitedTextSink",
