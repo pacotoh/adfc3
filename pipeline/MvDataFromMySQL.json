@@ -16,8 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "MySqlSource",
-						"query": "SELECT *\nFROM test\nWHERE value > 5;"
+						"type": "MySqlSource"
 					},
 					"sink": {
 						"type": "DelimitedTextSink",
@@ -86,12 +85,20 @@
 						"referenceName": "BlobContainer",
 						"type": "DatasetReference",
 						"parameters": {
-							"container": "input"
+							"container": {
+								"value": "@pipeline().parameters.input_path",
+								"type": "Expression"
+							}
 						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"input_path": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
