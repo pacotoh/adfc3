@@ -31,52 +31,6 @@
 						"type": "BinaryReadSettings"
 					}
 				}
-			},
-			{
-				"name": "IfFlagExists",
-				"type": "IfCondition",
-				"dependsOn": [
-					{
-						"activity": "FlagExists",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"expression": {
-						"value": "@activity('FlagExists').output.exists",
-						"type": "Expression"
-					},
-					"ifFalseActivities": [
-						{
-							"name": "Set variable2",
-							"type": "SetVariable",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"variableName": "flag_exists",
-								"value": "No existe"
-							}
-						}
-					],
-					"ifTrueActivities": [
-						{
-							"name": "Set variable1",
-							"type": "SetVariable",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"variableName": "flag_exists",
-								"value": {
-									"value": "Existe",
-									"type": "Expression"
-								}
-							}
-						}
-					]
-				}
 			}
 		],
 		"variables": {

@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "start.flg",
+				"fileName": "mv.flg",
 				"container": "input"
 			}
 		}
